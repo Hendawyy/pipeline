@@ -1,16 +1,11 @@
 @Library('shared_lib') _
-
 pipeline {
-    agent {
-        label 'AWS'
-    }
+    agent any
 
     stages {
-        stage('Demo') {
+        stage('Install Nginx') {
             steps {
-                script {
-                    shared_lib.installnginx()
-                }
+                installNginx()
             }
         }
     }
