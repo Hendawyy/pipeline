@@ -1,12 +1,4 @@
-@Library('shared_lib') _
-pipeline {
-    agent any
-
-    stages {
-        stage('Install Nginx') {
-            steps {
-                installNginx()
-            }
-        }
-    }
-}
+@Library('shared_lib')_
+ stage('Install') {
+     echo 'Yarab'
+ }
