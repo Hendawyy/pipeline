@@ -2,4 +2,5 @@
  stage('Install') {
      echo 'Yarab'
      installNginx
+     sayHello 'Alex'
  }
