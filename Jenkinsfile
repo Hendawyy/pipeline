@@ -1,4 +1,17 @@
 @Library('shared_lib') _
-node('node') {
-    installNginx()
+
+pipeline {
+    agent {
+        label 'AWS'
+    }
+
+    stages {
+        stage('Demo') {
+            steps {
+                script {
+                    shared_lib.installnginx()
+                }
+            }
+        }
+    }
 }
